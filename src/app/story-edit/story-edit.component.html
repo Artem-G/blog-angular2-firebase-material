@@ -1,0 +1,20 @@
+<div *ngIf="story">
+  <button md-raised-button (click)="goBack()">Назад</button>
+  <h2><md-input placeholder="Название" [(ngModel)]="story.subject" maxlength="100" class="full-width"></md-input></h2>
+  <ul *ngIf="storyId" class="story-meta">
+    <li>
+      <i class="fa fa-calendar" aria-hidden="true"></i> {{story.created}}
+    </li>
+    <li>
+      <i class="fa fa-user-circle" aria-hidden="true"></i> {{story.author}}
+    </li>
+  </ul>
+
+  <tiny-mce [elementId]="'my-editor-id'" (onEditorKeyup)="keyupHandlerFunction($event)" [content]="story.text" #text></tiny-mce>
+
+  <div class="buttons">
+    <button md-raised-button (click)="saveStory()">Сохранить</button>
+    <button md-raised-button (click)="goBack()">Отмена</button>
+    <button *ngIf="storyId" md-raised-button (click)="deleteStory()">Удалить</button>
+  </div>
+</div>

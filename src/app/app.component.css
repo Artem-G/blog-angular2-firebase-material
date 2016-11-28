@@ -1,0 +1,11 @@
+.main-content {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  box-sizing: border-box;
+  padding: 16px;
+  z-index: 0; }
+
+/*# sourceMappingURL=app.component.css.map */

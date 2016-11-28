@@ -1,0 +1,17 @@
+ul.story-meta {
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #999;
+  list-style: none; }
+
+ul.story-meta li {
+  display: inline;
+  padding-right: 20px; }
+
+.buttons {
+  margin: 8px 0 0 0; }
+
+.full-width {
+  width: 100%; }
+
+/*# sourceMappingURL=story-edit.component.css.map */

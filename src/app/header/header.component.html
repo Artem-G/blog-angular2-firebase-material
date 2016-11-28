@@ -1,0 +1,9 @@
+<md-toolbar color="primary">
+  <span>
+    <a [routerLink]="['/']">Семейные истории</a>
+  </span>
+  <span *ngIf="user.isLoggedIn() && af.auth | async">
+    {{user.getUsername()}}
+    <button (click)="user.logout()">Выйти</button>
+  </span>
+</md-toolbar>

@@ -1,0 +1,17 @@
+<div *ngIf="story">
+  <button md-raised-button [routerLink]="['/']">Назад</button>
+  <button md-raised-button [routerLink]="['/story/edit', storyId]">Редактировать</button>
+  <h2>{{story.subject}}</h2>
+  <ul class="story-meta">
+    <li>
+      <i class="fa fa-calendar" aria-hidden="true"></i> {{story.created}}
+    </li>
+    <li>
+      <i class="fa fa-user-circle" aria-hidden="true"></i> {{story.author}}
+    </li>
+  </ul>
+</div>
+<div class="story-text" #textContainer></div>
+
+<!--<h3>Комментарии</h3>
+<p>Комментарии не найдены.</p>-->

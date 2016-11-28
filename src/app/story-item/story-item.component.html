@@ -1,0 +1,8 @@
+<md-card>
+  <md-card-subtitle>{{story.author}}</md-card-subtitle>
+  <md-card-title>{{story.subject}}</md-card-title>
+  <md-card-content>{{story.excerpt}}</md-card-content>
+  <md-card-actions>
+    <button md-button [routerLink]="['/story', story.$key]">ЧИТАТЬ</button>
+  </md-card-actions>
+</md-card>

@@ -1,0 +1,8 @@
+<div class="page">
+  <div class="buttons">
+    <button md-raised-button color="accent" [routerLink]="['/new/story']">+ добавить новую историю</button>
+  </div>
+  <div class="stories-container">
+    <story-item *ngFor="let story of stories | async" [story]="story"></story-item>
+  </div>
+</div>

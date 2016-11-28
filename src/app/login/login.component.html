@@ -1,0 +1,11 @@
+<button md-raised-button [routerLink]="['/']">На главную</button>
+<h2>Вход</h2>
+<div *ngIf="!(af.auth | async)">
+  <p>Пожалуйста войдите, чтобы работать с сайтом</p>
+
+  <p><button md-raised-button="" (click)="user.login()">Войти / Зарегистрироваться</button></p>
+</div>
+<div *ngIf="af.auth | async">
+  <p>Здравствуйте, {{user.getUsername()}}</p>
+  <p><button md-raised-button="" (click)="user.logout()">Выйти</button></p>
+</div>
